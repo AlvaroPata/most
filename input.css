@@ -36,15 +36,8 @@ html {
 }
 
 #navbar {
-  padding-top: env(safe-area-inset-top);
-}
-#navbar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: env(safe-area-inset-top);
+  top: calc(-1 * env(safe-area-inset-top, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
