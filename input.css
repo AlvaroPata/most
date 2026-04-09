@@ -35,12 +35,6 @@ html {
   background-color: #1e40af;
 }
 
-#navbar {
-  top: calc(-1 * env(safe-area-inset-top, 0px));
-  padding-top: env(safe-area-inset-top, 0px);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-}
 /* JS fallback class for browsers without scroll-driven animations */
 #nav-logo.no-scroll-animation {
   animation: none;
