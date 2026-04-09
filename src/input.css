@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Scroll-driven navbar logo reveal */
+@keyframes nav-logo-in {
+  0% {
+    opacity: 0;
+    font-size: 0rem;
+  }
+  25% {
+    opacity: 0;
+    font-size: 0rem;
+  }
+  50% {
+    opacity: 1;
+    font-size: 1.5rem;
+  }
+  100% {
+    opacity: 1;
+    font-size: 1.5rem;
+  }
+}
+
+#nav-logo {
+  animation: nav-logo-in linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 400px;
+}

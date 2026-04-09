@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOST Madrid — Experiências de Lifestyle & Viagem em Madrid</title>
+  <meta name="description"
+    content="A MOST Madrid cria experiências imersivas de lifestyle e viagem em Madrid. Roteiros personalizados, concierge exclusivo e curadoria cultural para viver Madrid como um insider." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mostmadrid.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MOST Madrid — Experiências de Lifestyle & Viagem em Madrid" />
+  <meta property="og:description"
+    content="Roteiros personalizados, concierge exclusivo e curadoria cultural para viver Madrid como um insider." />
+  <meta property="og:url" content="https://mostmadrid.com/" />
+  <meta property="og:site_name" content="MOST Madrid" />
+  <meta property="og:locale" content="pt_BR" />
+  <!-- <meta property="og:image" content="https://mostmadrid.com/images/og-cover.jpg" /> -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MOST Madrid — Madrid como um insider" />
+  <meta name="twitter:description"
+    content="Experiências imersivas de lifestyle e viagem em Madrid. Roteiros personalizados e curadoria cultural." />
+  <!-- <meta name="twitter:image" content="https://mostmadrid.com/images/og-cover.jpg" /> -->
+
+  <!-- Preload hero font for faster LCP -->
+  <link rel="preload"
+    href="https://fonts.gstatic.com/s/playfairdisplay/v37/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTbtbK-F2rA0s.woff2"
+    as="font" type="font/woff2" crossorigin />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/dist/output.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "MOST Madrid",
+      "url": "https://mostmadrid.com",
+      "description": "Experiências imersivas de lifestyle e viagem em Madrid. Roteiros personalizados, concierge exclusivo e curadoria cultural.",
+      "email": "hello@mostmadrid.com",
+      "areaServed": {
+        "@type": "City",
+        "name": "Madrid",
+        "addressCountry": "ES"
+      },
+      "knowsLanguage": ["pt-BR", "es", "en"],
+      "sameAs": []
+    }
+    </script>
+</head>
+
+<body class="font-sans antialiased">
+  <!-- ======= NAVBAR ======= -->
+  <nav id="navbar" class="fixed top-0 inset-x-0 z-50 backdrop-blur-md transition-colors duration-300">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <!-- Navbar logo placeholder — hidden until scroll -->
+      <a href="#" id="nav-logo" class="font-bold tracking-tight text-white transition-colors duration-300"
+        style="font-family:'Playfair Display',serif">
+        MOST <span>Madrid</span>
+      </a>
+      <ul id="nav-links" class="hidden md:flex gap-8 text-sm font-medium text-white transition-colors duration-300">
+        <li><a href="#about" class="hover:opacity-70 transition">Sobre</a></li>
+        <li><a href="#quem-somos" class="hover:opacity-70 transition">Quem Somos</a></li>
+        <li><a href="#servicos" class="hover:opacity-70 transition">Serviços</a></li>
+        <li><a href="#how-it-works" class="hover:opacity-70 transition">Como Funciona</a></li>
+        <li><a href="#contact" class="hover:opacity-70 transition">Contato</a></li>
+      </ul>
+      <!-- Mobile menu button -->
+      <button id="menu-toggle" class="md:hidden text-white transition-colors duration-300" aria-label="Abrir menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-blue-100 bg-white">
+      <ul class="flex flex-col gap-4 px-6 py-4 text-sm font-medium text-blue-600">
+        <li><a href="#about" class="hover:text-blue-800 transition">Sobre</a></li>
+        <li><a href="#quem-somos" class="hover:text-blue-800 transition">Quem Somos</a></li>
+        <li><a href="#servicos" class="hover:text-blue-800 transition">Serviços</a></li>
+        <li><a href="#how-it-works" class="hover:text-blue-800 transition">Como Funciona</a></li>
+        <li><a href="#contact" class="hover:text-blue-800 transition">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======= HERO (blue bg / white text) ======= -->
+  <header class="relative flex items-center justify-center min-h-screen bg-blue-800">
+    <div class="relative z-10 text-center px-6 max-w-3xl">
+      <!-- Large serif logo -->
+      <div id="hero-logo" class="mb-6">
+        <span class="text-white font-black text-6xl sm:text-8xl md:text-9xl tracking-tight"
+          style="font-family:'Playfair Display',serif">
+          MOST <span class="text-blue-200">Madrid</span>
+        </span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+        Madrid como um insider
+      </h1>
+      <p class="text-lg text-blue-100 mb-8">
+        Experiências curadas, lugares secretos e cultura local autêntica — feitas para o viajante moderno.
+      </p>
+      <a href="#about"
+        class="inline-block bg-white hover:bg-blue-50 text-blue-800 font-semibold px-8 py-3 rounded-full transition">
+        Descubra Mais
+      </a>
+    </div>
+  </header>
+
+  <!-- ======= NOSSA MISSÃO (white bg / blue text) ======= -->
+  <section id="about" class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-blue-500 uppercase tracking-widest text-sm font-semibold mb-2">Nossa Missão</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6" style="font-family:'Playfair Display',serif">
+          Redefinindo a Forma de Vivenciar Madrid
+        </h2>
+        <p class="text-blue-600/80 leading-relaxed mb-4">
+          A MOST Madrid é uma empresa de lifestyle e viagens enraizada na cultura vibrante da capital espanhola. Criamos
+          experiências imersivas que vão muito além do turismo convencional — conectando você a bairros autênticos,
+          tradições gastronômicas e a energia criativa que torna Madrid inesquecível.
+        </p>
+        <p class="text-blue-600/80 leading-relaxed">
+          Seja para um fim de semana ou para uma mudança de vida, ajudamos você a se sentir em casa em uma das
+          cidades mais empolgantes da Europa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= QUEM SOMOS / FOUNDERS (blue bg / white text) ======= -->
+  <section id="quem-somos" class="py-24 px-6 bg-blue-800">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+      <p class="text-blue-200 uppercase tracking-widest text-sm font-semibold mb-2">Quem Somos</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white" style="font-family:'Playfair Display',serif">
+        Conheça os Fundadores
+      </h2>
+    </div>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+      <!-- Founder 1 -->
+      <div class="text-center">
+        <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-white/15 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white/40" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-1">Nome do Fundador</h3>
+        <p class="text-blue-300 text-sm mb-3">Co-fundador & CEO</p>
+        <p class="text-blue-100/80 leading-relaxed text-sm max-w-xs mx-auto">
+          Apaixonado por Madrid e por conectar pessoas à cultura autêntica da cidade. Mais de 10 anos de experiência em
+          turismo e lifestyle.
+        </p>
+      </div>
+      <!-- Founder 2 -->
+      <div class="text-center">
+        <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-white/15 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white/40" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-1">Nome do Fundador</h3>
+        <p class="text-blue-300 text-sm mb-3">Co-fundador & COO</p>
+        <p class="text-blue-100/80 leading-relaxed text-sm max-w-xs mx-auto">
+          Especialista em experiências imersivas e curadoria cultural. Acredita que viajar é a melhor forma de
+          transformar vidas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SERVIÇOS (white bg / blue text) ======= -->
+  <section id="servicos" class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+      <p class="text-blue-500 uppercase tracking-widest text-sm font-semibold mb-2">Serviços</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4" style="font-family:'Playfair Display',serif">
+        Propostas Personalizadas
+      </h2>
+      <p class="text-blue-600/80 max-w-2xl mx-auto leading-relaxed">
+        Atendimento sob consulta. A MOST Madrid oferece diferentes níveis de apoio, de acordo com o estilo de viagem e o
+        grau de acompanhamento desejado.
+      </p>
+    </div>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+      <!-- Tier 1 -->
+      <div class="bg-blue-50 rounded-2xl p-8">
+        <div class="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-3 text-center">Roteiro Personalizado</h3>
+        <p class="text-blue-600/70 text-sm mb-5 text-center">Para quem busca independência com planejamento impecável.
+        </p>
+        <ul class="space-y-2 text-blue-600/70 text-sm list-disc pl-5">
+          <li>Organização dos dias (manhã, tarde e noite)</li>
+          <li>Bairros, horários ideais e logística</li>
+          <li>Sugestões gastronômicas alinhadas ao seu perfil</li>
+          <li>Alternativas inteligentes para imprevistos</li>
+        </ul>
+      </div>
+      <!-- Tier 2 -->
+      <div class="bg-blue-50 rounded-2xl p-8">
+        <div class="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-3 text-center">Experiência Assistida</h3>
+        <p class="text-blue-600/70 text-sm mb-5 text-center">Para quem deseja mais apoio e flexibilidade durante a
+          viagem.</p>
+        <ul class="space-y-2 text-blue-600/70 text-sm list-disc pl-5">
+          <li>Tudo do Roteiro Personalizado</li>
+          <li>Suporte para ajustes e refinamentos</li>
+          <li>Recomendações contínuas conforme o andamento da experiência</li>
+        </ul>
+      </div>
+      <!-- Tier 3 -->
+      <div class="bg-blue-50 rounded-2xl p-8">
+        <div class="w-14 h-14 mx-auto mb-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-3 text-center">Concierge Exclusivo</h3>
+        <p class="text-blue-600/70 text-sm mb-5 text-center">Para quem busca tranquilidade total.</p>
+        <ul class="space-y-2 text-blue-600/70 text-sm list-disc pl-5">
+          <li>Planejamento completo e acompanhamento prioritário</li>
+          <li>Coordenação da agenda e sequência ideal de experiências</li>
+          <li>Suporte contínuo durante a estadia</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-blue-500/60 text-sm text-center mt-12 max-w-lg mx-auto">
+      Trabalhamos com número limitado de clientes para garantir qualidade e atenção aos detalhes.
+    </p>
+  </section>
+
+  <!-- ======= COMO FUNCIONA (blue bg / white text) ======= -->
+  <section id="how-it-works" class="py-24 px-6 bg-blue-800">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+      <p class="text-blue-200 uppercase tracking-widest text-sm font-semibold mb-2">Como Funciona</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white" style="font-family:'Playfair Display',serif">
+        Três etapas para uma experiência impecável
+      </h2>
+    </div>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+      <!-- Step 1 -->
+      <div class="bg-white/10 rounded-2xl p-8">
+        <div class="w-14 h-14 mb-6 flex items-center justify-center rounded-full bg-white/15 text-white">
+          <span class="text-xl font-bold">1</span>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Contato Inicial Reservado</h3>
+        <p class="text-blue-100/80 leading-relaxed mb-4">
+          Uma conversa discreta e personalizada para compreender em profundidade as suas expectativas.
+        </p>
+        <ul class="space-y-2 text-blue-100/70 text-sm list-disc pl-5">
+          <li>Datas e duração da viagem</li>
+          <li>Perfil e ritmo desejado</li>
+          <li>Interesses culturais, gastronômicos e de lifestyle</li>
+          <li>Eventuais restrições ou preferências específicas</li>
+        </ul>
+      </div>
+      <!-- Step 2 -->
+      <div class="bg-white/10 rounded-2xl p-8">
+        <div class="w-14 h-14 mb-6 flex items-center justify-center rounded-full bg-white/15 text-white">
+          <span class="text-xl font-bold">2</span>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Planejamento Sob Medida</h3>
+        <p class="text-blue-100/80 leading-relaxed mb-4">
+          Cada detalhe é cuidadosamente estruturado para que a sua estadia flua com elegância e naturalidade.
+        </p>
+        <ul class="space-y-2 text-blue-100/70 text-sm list-disc pl-5">
+          <li>Sequência ideal dos dias</li>
+          <li>Experiências e endereços criteriosamente selecionados</li>
+          <li>Horários otimizados e deslocamentos eficientes</li>
+          <li>Alternativas preparadas para imprevistos</li>
+        </ul>
+      </div>
+      <!-- Step 3 -->
+      <div class="bg-white/10 rounded-2xl p-8">
+        <div class="w-14 h-14 mb-6 flex items-center justify-center rounded-full bg-white/15 text-white">
+          <span class="text-xl font-bold">3</span>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-3">Experiência Sem Preocupações</h3>
+        <p class="text-blue-100/80 leading-relaxed mb-4">
+          Você recebe um planejamento claro, elegante e fácil de seguir — pensado para que cada momento seja aproveitado
+          ao máximo.
+        </p>
+        <p class="text-blue-100/70 text-sm leading-relaxed">
+          Dependendo do serviço escolhido, oferecemos acompanhamento dedicado durante toda a sua estadia em Madrid.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTATO / FORM (white bg / blue text) ======= -->
+  <section id="contact" class="py-24 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="text-blue-500 uppercase tracking-widest text-sm font-semibold mb-2">Contato</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-800" style="font-family:'Playfair Display',serif">
+          Vamos Conversar
+        </h2>
+        <p class="text-blue-600/70 mt-4 max-w-lg mx-auto leading-relaxed">
+          Conte-nos sobre a sua viagem. Responderemos com discrição e atenção aos detalhes.
+        </p>
+      </div>
+      <form action="https://formsubmit.co/info@most.solutions" method="POST" class="space-y-6">
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="Nova consulta — MOST Madrid" />
+        <input type="hidden" name="_captcha" value="true" />
+        <input type="hidden" name="_next" value="https://www.most.solutions/#contact" />
+        <input type="text" name="_honey" style="display:none" />
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-blue-800 mb-2">Nome</label>
+            <input type="text" id="name" name="name" required
+              class="w-full px-4 py-3 rounded-xl border border-blue-200 bg-blue-50/50 text-blue-800 placeholder-blue-400/60 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition"
+              placeholder="Seu nome" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-blue-800 mb-2">E-mail</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-3 rounded-xl border border-blue-200 bg-blue-50/50 text-blue-800 placeholder-blue-400/60 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition"
+              placeholder="seu@email.com" />
+          </div>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-blue-800 mb-2">Mensagem</label>
+          <textarea id="message" name="message" rows="5" required
+            class="w-full px-4 py-3 rounded-xl border border-blue-200 bg-blue-50/50 text-blue-800 placeholder-blue-400/60 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition resize-none"
+            placeholder="Conte-nos sobre o seu estilo de viagem, interesses e expectativas..."></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit"
+            class="inline-block bg-blue-800 hover:bg-blue-900 text-white font-semibold px-10 py-3 rounded-full transition">
+            Enviar Consulta
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="bg-blue-800 text-blue-100 py-16 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="text-xl font-bold text-white mb-4" style="font-family:'Playfair Display',serif">MOST <span
+            class="text-blue-300">Madrid</span></h3>
+        <p class="text-sm leading-relaxed">
+          Experiências de lifestyle &amp; viagem enraizadas na cultura vibrante de Madrid. Descubra a cidade com a
+          gente.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Links Rápidos</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#about" class="hover:text-white transition">Sobre</a></li>
+          <li><a href="#servicos" class="hover:text-white transition">Serviços</a></li>
+          <li><a href="#how-it-works" class="hover:text-white transition">Como Funciona</a></li>
+          <li><a href="#contact" class="hover:text-white transition">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Fale Conosco</h4>
+        <a href="mailto:info@most.solutions"
+          class="text-sm mb-2 block hover:text-white transition">info@most.solutions</a>
+        <a href="https://www.instagram.com/most_madrid/" target="_blank" aria-label="Instagram" class="hover:text-white transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-blue-700 text-center text-sm text-blue-300">
+      &copy; 2026 MOST Madrid. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Mobile menu toggle + Scroll animation -->
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Scroll-driven logo animation
+    (function () {
+      const navbar = document.getElementById('navbar');
+      const navLogo = document.getElementById('nav-logo');
+      const heroLogo = document.getElementById('hero-logo');
+      const heroSection = heroLogo.closest('header');
+      const navLinks = document.getElementById('nav-links');
+      const menuToggle = document.getElementById('menu-toggle');
+      const triggerStart = 100;
+      const triggerEnd = 400;
+
+      function onScroll() {
+        const y = window.scrollY;
+        const progress = Math.min(Math.max((y - triggerStart) / (triggerEnd - triggerStart), 0), 1);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // Section-aware navbar color switching
+    (function () {
+      const navbar = document.getElementById('navbar');
+      const navLinks = document.getElementById('nav-links');
+      const navLogo = document.getElementById('nav-logo');
+      const menuToggle = document.getElementById('menu-toggle');
+
+      // Mark sections as light (white bg) or dark (blue bg)
+      const sections = document.querySelectorAll('header, section, footer');
+
+      function setDarkMode() {
+        // White text for dark (blue) backgrounds
+        navLinks.classList.add('text-white');
+        navLinks.classList.remove('text-blue-800');
+        navLogo.classList.add('text-white');
+        navLogo.classList.remove('text-blue-800');
+        menuToggle.classList.add('text-white');
+        menuToggle.classList.remove('text-blue-800');
+      }
+
+      function setLightMode() {
+        // Blue text for light (white) backgrounds
+        navLinks.classList.remove('text-white');
+        navLinks.classList.add('text-blue-800');
+        navLogo.classList.remove('text-white');
+        navLogo.classList.add('text-blue-800');
+        menuToggle.classList.remove('text-white');
+        menuToggle.classList.add('text-blue-800');
+      }
+
+      // Use IntersectionObserver with rootMargin to detect which section is at the top
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const bg = getComputedStyle(entry.target).backgroundColor;
+            // Parse RGB — white sections have high R values, blue sections have low R
+            const match = bg.match(/\d+/g);
+            if (match) {
+              const r = parseInt(match[0]);
+              // White bg has r=255, blue-800 has r=29
+              if (r > 200) {
+                setLightMode();
+              } else {
+                setDarkMode();
+              }
+            }
+          }
+        });
+      }, {
+        rootMargin: '-1px 0px -100% 0px',  // Only trigger at the very top of viewport
+        threshold: 0
+      });
+
+      sections.forEach(function (section) {
+        observer.observe(section);
+      });
+    })();
+  </script>
+</body>
+
+</html>
