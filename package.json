@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify",
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
+    "serve": "npx live-server --port=3000",
+    "start": "concurrently \"npm run dev\" \"npm run serve\""
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "description": "",
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.2",
+    "concurrently": "^9.2.1",
     "tailwindcss": "^4.2.2"
   }
 }
