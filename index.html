@@ -741,7 +741,10 @@
       // Scroll-driven logo animation (JS fallback for Safari/iOS)
       (function () {
         const navLogo = document.getElementById('nav-logo');
-        const supportsScrollTimeline = CSS.supports('animation-timeline', 'scroll()');
+        const supportsScrollTimeline = CSS.supports(
+          'animation-timeline',
+          'scroll()'
+        );
 
         if (!supportsScrollTimeline) {
           navLogo.classList.add('no-scroll-animation');

@@ -20,10 +20,10 @@ This runs the Tailwind watcher and a local dev server on port 3000.
 
 ### Scripts
 
-| Command          | Description                              |
-| ---------------- | ---------------------------------------- |
-| `npm start`      | Dev server + Tailwind watcher            |
-| `npm run dev`    | Tailwind CSS watch mode                  |
-| `npm run build`  | Build & minify CSS for production        |
-| `npm run serve`  | Start live-server on port 3000           |
-| `npm run format` | Format files with Prettier               |
+| Command          | Description                       |
+| ---------------- | --------------------------------- |
+| `npm start`      | Dev server + Tailwind watcher     |
+| `npm run dev`    | Tailwind CSS watch mode           |
+| `npm run build`  | Build & minify CSS for production |
+| `npm run serve`  | Start live-server on port 3000    |
+| `npm run format` | Format files with Prettier        |
