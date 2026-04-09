@@ -1,5 +1,4 @@
 @import 'tailwindcss' source(none);
-@source "../";
 @source "./";
 
 /* Scroll-driven navbar logo reveal */
