@@ -738,27 +738,26 @@
           document.getElementById('submit-btn').disabled = !this.checked;
         });
 
-      // Scroll-driven logo animation
+      // Scroll-driven logo animation (JS fallback for Safari/iOS)
       (function () {
-        const navbar = document.getElementById('navbar');
         const navLogo = document.getElementById('nav-logo');
-        const heroLogo = document.getElementById('hero-logo');
-        const heroSection = heroLogo.closest('header');
-        const navLinks = document.getElementById('nav-links');
-        const menuToggle = document.getElementById('menu-toggle');
-        const triggerStart = 100;
-        const triggerEnd = 400;
+        const supportsScrollTimeline = CSS.supports('animation-timeline', 'scroll()');
 
-        function onScroll() {
-          const y = window.scrollY;
-          const progress = Math.min(
-            Math.max((y - triggerStart) / (triggerEnd - triggerStart), 0),
-            1
-          );
+        if (!supportsScrollTimeline) {
+          navLogo.classList.add('no-scroll-animation');
+          navLogo.style.opacity = '0';
+          navLogo.style.fontSize = '0rem';
+
+          function onScroll() {
+            const y = window.scrollY;
+            const progress = Math.min(Math.max(y / 400, 0), 1);
+            navLogo.style.opacity = progress;
+            navLogo.style.fontSize = progress >= 0.5 ? '1.5rem' : '0rem';
+          }
+
+          window.addEventListener('scroll', onScroll, { passive: true });
+          onScroll();
         }
-
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
       })();
 
       // Section-aware navbar color switching
@@ -767,12 +766,9 @@
         const navLinks = document.getElementById('nav-links');
         const navLogo = document.getElementById('nav-logo');
         const menuToggle = document.getElementById('menu-toggle');
-
-        // Mark sections as light (white bg) or dark (blue bg)
         const sections = document.querySelectorAll('header, section, footer');
 
         function setDarkMode() {
-          // White text for dark (blue) backgrounds
           navLinks.classList.add('text-white');
           navLinks.classList.remove('text-blue-800');
           navLogo.classList.add('text-white');
@@ -782,7 +778,6 @@
         }
 
         function setLightMode() {
-          // Blue text for light (white) backgrounds
           navLinks.classList.remove('text-white');
           navLinks.classList.add('text-blue-800');
           navLogo.classList.remove('text-white');
@@ -791,35 +786,27 @@
           menuToggle.classList.add('text-blue-800');
         }
 
-        // Use IntersectionObserver with rootMargin to detect which section is at the top
-        const observer = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                const bg = getComputedStyle(entry.target).backgroundColor;
-                // Parse RGB — white sections have high R values, blue sections have low R
-                const match = bg.match(/\d+/g);
-                if (match) {
-                  const r = parseInt(match[0]);
-                  // White bg has r=255, blue-800 has r=29
-                  if (r > 200) {
-                    setLightMode();
-                  } else {
-                    setDarkMode();
-                  }
+        function update() {
+          var checkPoint = window.scrollY + navbar.offsetHeight / 2;
+
+          for (var i = sections.length - 1; i >= 0; i--) {
+            if (sections[i].offsetTop <= checkPoint) {
+              var bg = getComputedStyle(sections[i]).backgroundColor;
+              var match = bg.match(/\d+/g);
+              if (match) {
+                if (parseInt(match[0]) > 200) {
+                  setLightMode();
+                } else {
+                  setDarkMode();
                 }
               }
-            });
-          },
-          {
-            rootMargin: '-1px 0px -100% 0px', // Only trigger at the very top of viewport
-            threshold: 0,
+              break;
+            }
           }
-        );
+        }
 
-        sections.forEach(function (section) {
-          observer.observe(section);
-        });
+        window.addEventListener('scroll', update, { passive: true });
+        update();
       })();
     </script>
   </body>
