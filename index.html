@@ -347,9 +347,16 @@
             class="w-full px-4 py-3 rounded-xl border border-blue-200 bg-blue-50/50 text-blue-800 placeholder-blue-400/60 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition resize-none"
             placeholder="Conte-nos sobre o seu estilo de viagem, interesses e expectativas..."></textarea>
         </div>
+        <div class="flex items-start gap-3">
+          <input type="checkbox" id="consent" name="consent" required
+            class="mt-1 h-4 w-4 rounded border-blue-300 text-blue-800 focus:ring-blue-300" />
+          <label for="consent" class="text-sm text-blue-600/70 leading-relaxed">
+            Li e concordo com a <a href="privacidade.html" target="_blank" class="underline hover:text-blue-800 transition">Política de Privacidade</a>. Autorizo o tratamento dos meus dados pessoais para resposta a esta consulta.
+          </label>
+        </div>
         <div class="text-center">
-          <button type="submit"
-            class="inline-block bg-blue-800 hover:bg-blue-900 text-white font-semibold px-10 py-3 rounded-full transition">
+          <button type="submit" id="submit-btn" disabled
+            class="inline-block bg-blue-800 text-white font-semibold px-10 py-3 rounded-full transition disabled:opacity-40 disabled:cursor-not-allowed hover:bg-blue-900">
             Enviar Consulta
           </button>
         </div>
@@ -375,6 +382,7 @@
           <li><a href="#servicos" class="hover:text-white transition">Serviços</a></li>
           <li><a href="#how-it-works" class="hover:text-white transition">Como Funciona</a></li>
           <li><a href="#contact" class="hover:text-white transition">Contato</a></li>
+          <li><a href="privacidade.html" class="hover:text-white transition">Política de Privacidade</a></li>
         </ul>
       </div>
       <div>
@@ -390,7 +398,7 @@
       </div>
     </div>
     <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-blue-700 text-center text-sm text-blue-300">
-      &copy; 2026 MOST Madrid. All rights reserved.
+      &copy; 2026 MOST Madrid. All rights reserved. · <a href="privacidade.html" class="hover:text-white transition">Política de Privacidade</a>
     </div>
   </footer>
 
@@ -398,6 +406,11 @@
   <script>
     document.getElementById('menu-toggle').addEventListener('click', function () {
       document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Consent checkbox → enable/disable submit button
+    document.getElementById('consent').addEventListener('change', function () {
+      document.getElementById('submit-btn').disabled = !this.checked;
     });
 
     // Scroll-driven logo animation
