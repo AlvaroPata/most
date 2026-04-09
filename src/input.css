@@ -1,4 +1,4 @@
-@import "tailwindcss" source(none);
+@import 'tailwindcss' source(none);
 @source "../";
 @source "./";
 
@@ -27,6 +27,6 @@
   animation-timeline: scroll();
   animation-range: 0px 400px;
   line-height: 1.5rem;
-    height: 1.5rem;
-    overflow: hidden;
+  height: 1.5rem;
+  overflow: hidden;
 }
