@@ -34,8 +34,19 @@
 html {
   background-color: #1e40af;
 }
+
 #navbar {
   padding-top: env(safe-area-inset-top);
+}
+#navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 /* JS fallback class for browsers without scroll-driven animations */
 #nav-logo.no-scroll-animation {
