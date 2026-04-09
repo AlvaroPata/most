@@ -37,3 +37,8 @@
     opacity 0.3s,
     font-size 0.3s;
 }
+
+/* Safe-area insets for notched iPhones */
+#navbar {
+  padding-top: env(safe-area-inset-top);
+}
