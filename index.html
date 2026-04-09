@@ -117,29 +117,18 @@
         <!-- Mobile menu button -->
         <button
           id="menu-toggle"
-          class="md:hidden text-white transition-colors duration-300"
+          class="md:hidden text-white transition-colors duration-300 relative w-6 h-6"
           aria-label="Abrir menu"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
+          <span class="menu-bar absolute left-0 w-6 h-0.5 bg-current rounded transition-all duration-300 top-[4px] origin-center"></span>
+          <span class="menu-bar absolute left-0 w-6 h-0.5 bg-current rounded transition-all duration-300 top-[11px] origin-center"></span>
+          <span class="menu-bar absolute left-0 w-6 h-0.5 bg-current rounded transition-all duration-300 top-[18px] origin-center"></span>
         </button>
       </div>
       <!-- Mobile menu -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden border-t border-blue-100 bg-white"
+        class="md:hidden border-t border-blue-100 bg-white overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0"
       >
         <ul
           class="flex flex-col gap-4 px-6 py-4 text-sm font-medium text-blue-600"
@@ -728,8 +717,51 @@
       document
         .getElementById('menu-toggle')
         .addEventListener('click', function () {
-          document.getElementById('mobile-menu').classList.toggle('hidden');
+          var menu = document.getElementById('mobile-menu');
+          var bars = this.querySelectorAll('.menu-bar');
+          var isOpen = this.classList.toggle('open');
+
+          // Animate hamburger → X
+          bars[0].style.transform = isOpen
+            ? 'translateY(7px) rotate(45deg)'
+            : '';
+          bars[1].style.opacity = isOpen ? '0' : '1';
+          bars[2].style.transform = isOpen
+            ? 'translateY(-7px) rotate(-45deg)'
+            : '';
+
+          // Slide menu open/closed
+          if (isOpen) {
+            menu.style.maxHeight = menu.scrollHeight + 'px';
+            menu.style.opacity = '1';
+          } else {
+            menu.style.maxHeight = '0';
+            menu.style.opacity = '0';
+          }
         });
+
+      // Close mobile menu when a link is tapped or clicking outside
+      function closeMobileMenu() {
+        var toggle = document.getElementById('menu-toggle');
+        var menu = document.getElementById('mobile-menu');
+        if (!toggle.classList.contains('open')) return;
+        toggle.classList.remove('open');
+        var bars = toggle.querySelectorAll('.menu-bar');
+        bars[0].style.transform = '';
+        bars[1].style.opacity = '1';
+        bars[2].style.transform = '';
+        menu.style.maxHeight = '0';
+        menu.style.opacity = '0';
+      }
+
+      document.querySelectorAll('#mobile-menu a').forEach(function (link) {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      document.addEventListener('click', function (e) {
+        var nav = document.getElementById('navbar');
+        if (!nav.contains(e.target)) closeMobileMenu();
+      });
 
       // Consent checkbox → enable/disable submit button
       document
