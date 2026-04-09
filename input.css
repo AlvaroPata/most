@@ -30,6 +30,10 @@
   overflow: hidden;
 }
 
+/* Safe-area insets for notched iPhones */
+#navbar {
+  padding-top: env(safe-area-inset-top);
+}
 /* JS fallback class for browsers without scroll-driven animations */
 #nav-logo.no-scroll-animation {
   animation: none;
